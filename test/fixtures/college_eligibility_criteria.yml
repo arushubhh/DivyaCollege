@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  college: one
+  minimum_eligibility_percentage: 1.5
+  year: MyString
+
+two:
+  college: two
+  minimum_eligibility_percentage: 1.5
+  year: MyString

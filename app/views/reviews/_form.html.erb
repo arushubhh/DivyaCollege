@@ -1,0 +1,37 @@
+<%= form_with(model: review) do |form| %>
+  <% if review.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(review.errors.count, "error") %> prohibited this review from being saved:</h2>
+
+      <ul>
+        <% review.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :college_id, style: "display: block" %>
+    <%= form.text_field :college_id %>
+  </div>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.label :review_matrix, style: "display: block" %>
+    <%= form.text_field :review_matrix %>
+  </div>
+
+  <div>
+    <%= form.label :review_comment, style: "display: block" %>
+    <%= form.text_area :review_comment %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
